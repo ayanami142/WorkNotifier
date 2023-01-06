@@ -43,7 +43,7 @@ class Window(QMainWindow):
 
     def create_greetings_block(self):
         self.greetings_label = QLabel("<h1>Hello, {}</h1>".format(constants.USERNAME), self)
-        self.greetings_label.move(0, 10)
+        self.greetings_label.move(0, constants.BLOCK_MARGIN)
         self.greetings_label.setMinimumWidth(constants.APP_WIDTH)
         self.greetings_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -65,7 +65,7 @@ class Window(QMainWindow):
         # stop work button
         self.stop_work_button = QPushButton("Stop work", self)
         self.stop_work_button.setGeometry(
-            constants.APP_WIDTH - constants.BUTTON_WIDTH - 10,
+            constants.APP_WIDTH - constants.BUTTON_WIDTH - constants.BLOCK_MARGIN,
             constants.TIMER_BLOCK_Y_CORDS,
             constants.BUTTON_WIDTH,
             constants.BUTTON_HEIGHT
